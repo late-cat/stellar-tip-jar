@@ -24,7 +24,7 @@ This project successfully implements all required fundamental Stellar developmen
 ## ✨ What Makes StellaTip Exceptional?
 While basic templates simply get the job done, **StellaTip** was built to deliver an iconic, production-ready user experience. Here is what sets it apart:
 
-- **💎 Premium "Cosmic Glass" UI:** Moves away from flat, generic designs by implementing beautiful Glassmorphism (translucent backgrounds, background blurs, and gradient meshes) using advanced Tailwind CSS utilities.
+- **🎨 Organic "Paper & Ink" UI:** Moves away from flat, generic templates by implementing a highly physical, textured paper aesthetic with beautiful typographic ink contrast and subtle soft shadows.
 - **🎬 Butter-Smooth Animations:** Integrates `framer-motion` for highly polished component mount animations, hover states, and dynamic layout shifts, making the dApp feel alive and responsive.
 - **⚡ Frictionless Tipping UX:** Features one-click preset donation tiers (Coffee, Awesome, Hero) alongside a robust custom amount input, dramatically reducing the friction of typing long numbers.
 - **📱 Integrated QR Code Generation:** Dynamically generates a highly scannable, stylized QR code of the creator's address using `qrcode.react`, bridging the gap between desktop browsing and mobile wallet scanning.

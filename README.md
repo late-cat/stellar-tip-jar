@@ -52,6 +52,10 @@ Here is a visual demonstration proving all White Belt requirements have been met
 *The transaction succeeds on the testnet! The user is presented with a success toast notification containing a clickable link to verify the transaction hash on the explorer, alongside a celebratory confetti overlay.*
 <img src="demo/img/payment-successful.png" alt="Transaction Success" width="800"/>
 
+### 5. On-Chain Verification (Stellar Expert)
+*Clicking the explorer link proves the transaction was successfully settled on the ledger, showcasing the exact fee, source account, and memo.*
+<img src="demo/img/explorer-verification.png" alt="Explorer Verification" width="800"/>
+
 ---
 
 ## 🏗️ Project Structure

@@ -17,15 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-stellar-dark text-white antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         {children}
         <Toaster 
           position="bottom-center" 
           toastOptions={{
             style: {
-              background: '#161421',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.1)',
+              background: '#FFFFFF',
+              color: '#2C2A26',
+              border: '1px solid rgba(0,0,0,0.1)',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.05)',
             }
           }}
         />

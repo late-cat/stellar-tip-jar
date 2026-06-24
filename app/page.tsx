@@ -41,15 +41,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative overflow-hidden flex flex-col">
-      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-stellar-purple/20 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-stellar-accent/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
       
       <header className="w-full p-6 flex justify-between items-center z-20">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-stellar-purple to-stellar-accent flex items-center justify-center shadow-lg shadow-stellar-purple/30">
-            <Sparkles className="text-white w-5 h-5" />
+          <div className="w-10 h-10 rounded-xl bg-stellar-purple/10 border border-stellar-purple/20 flex items-center justify-center shadow-sm">
+            <Sparkles className="text-stellar-purple w-5 h-5" />
           </div>
-          <h1 className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
+          <h1 className="text-2xl font-bold tracking-tight text-stellar-ink font-serif italic">
             StellaTip
           </h1>
         </div>
@@ -66,12 +65,12 @@ export default function Home() {
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm pointer-events-none"
+            className="absolute inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-md pointer-events-none"
           >
             <div className="text-center">
-              <div className="text-6xl mb-4">🎉</div>
-              <h2 className="text-3xl font-bold text-white mb-2 shadow-black drop-shadow-md">Thank You!</h2>
-              <p className="text-white/80 shadow-black drop-shadow-md">Your tip has been sent to the creator.</p>
+              <div className="text-6xl mb-4 animate-float">🎉</div>
+              <h2 className="text-3xl font-bold text-stellar-ink mb-2 font-serif">Thank You!</h2>
+              <p className="text-stellar-ink/80 font-medium">Your tip has been sent to the creator.</p>
             </div>
           </motion.div>
         )}
@@ -82,8 +81,8 @@ export default function Home() {
           onSuccess={handleSuccess}
         />
         
-        <p className="mt-12 text-white/30 text-sm text-center">
-          Built on the <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className="text-stellar-purple-light hover:text-stellar-accent transition-colors">Stellar Network</a>
+        <p className="mt-12 text-stellar-ink/40 text-sm text-center font-medium">
+          Built on the <a href="https://stellar.org" target="_blank" rel="noopener noreferrer" className="text-stellar-purple hover:text-stellar-accent transition-colors underline decoration-dotted underline-offset-4">Stellar Network</a>
         </p>
       </div>
     </main>

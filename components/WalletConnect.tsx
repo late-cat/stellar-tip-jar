@@ -41,7 +41,7 @@ export default function WalletConnect({ onConnect, onDisconnect, connectedKey, b
       <button
         onClick={handleConnect}
         disabled={isConnecting}
-        className="flex items-center gap-2 bg-stellar-purple hover:bg-stellar-purple-light transition-all text-white px-5 py-2.5 rounded-full font-medium shadow-[0_0_15px_rgba(90,49,244,0.4)] hover:shadow-[0_0_25px_rgba(90,49,244,0.6)] disabled:opacity-70"
+        className="flex items-center gap-2 bg-stellar-purple hover:bg-stellar-purple-light transition-all text-white px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg disabled:opacity-70"
       >
         <Wallet className="w-4 h-4" />
         {isConnecting ? "Connecting..." : "Connect Freighter"}
@@ -53,25 +53,25 @@ export default function WalletConnect({ onConnect, onDisconnect, connectedKey, b
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-white px-4 py-2 rounded-full font-medium backdrop-blur-md"
+        className="flex items-center gap-3 bg-white/80 hover:bg-white border border-black/10 shadow-sm transition-all text-stellar-ink px-4 py-2 rounded-full font-medium backdrop-blur-md"
       >
-        <div className="w-2 h-2 rounded-full bg-stellar-accent animate-pulse-glow" />
-        <span className="text-sm">
+        <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+        <span className="text-sm font-semibold tracking-wide">
           {stellar.formatAddress(connectedKey)}
         </span>
         {balance && (
-          <span className="text-sm text-white/60 pl-2 border-l border-white/10">
+          <span className="text-sm text-stellar-ink/60 pl-2 border-l border-black/10 font-mono">
             {Number(balance).toFixed(2)} XLM
           </span>
         )}
-        <ChevronDown className="w-4 h-4 text-white/50" />
+        <ChevronDown className="w-4 h-4 text-stellar-ink/50" />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 rounded-xl glass-panel overflow-hidden py-1 z-50">
+        <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white border border-black/5 shadow-lg overflow-hidden py-1 z-50">
           <button
             onClick={handleDisconnect}
-            className="flex items-center gap-2 w-full px-4 py-3 text-sm text-red-400 hover:bg-white/5 transition-colors text-left"
+            className="flex items-center gap-2 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 font-medium transition-colors text-left"
           >
             <LogOut className="w-4 h-4" />
             Disconnect

@@ -40,13 +40,17 @@ Here is a visual demonstration proving all White Belt requirements have been met
 *The wallet is successfully connected. The user's abbreviated public key and precise XLM balance are elegantly displayed in the top right pill on the main interface.*
 <img src="demo/img/hero-demo.png" alt="Wallet Connected and Balance" width="800"/>
 
-### 2. Transaction Flow (Wallet Modal & Signing)
-*When a transaction is initiated, the application connects to the user's selected wallet (e.g., Freighter) and prompts them to securely sign the transaction payload.*
-<img src="demo/img/wallet-modal.png" alt="Signing Transaction" width="800"/>
+### 2. Connect a Wallet Modal
+*When a user clicks connect, they are presented with a beautiful modal allowing them to select their preferred Stellar wallet (like Freighter).*
+<img src="demo/img/connect-a-wallet.png" alt="Connect Wallet Modal" width="800"/>
 
-### 3. Successful Testnet Transaction & User Feedback
+### 3. Transaction Flow & Signing
+*When a transaction is initiated, the application connects to the selected wallet and prompts the user to securely sign the transaction payload.*
+<img src="demo/img/confirm-transaction.png" alt="Signing Transaction" width="800"/>
+
+### 4. Successful Testnet Transaction & User Feedback
 *The transaction succeeds on the testnet! The user is presented with a success toast notification containing a clickable link to verify the transaction hash on the explorer, alongside a celebratory confetti overlay.*
-<img src="demo/img/freighter-confirm.png" alt="Transaction Success" width="800"/>
+<img src="demo/img/payment-successful.png" alt="Transaction Success" width="800"/>
 
 ---
 

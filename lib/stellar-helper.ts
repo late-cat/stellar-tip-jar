@@ -1,8 +1,3 @@
-/**
- * Stellar Helper - Blockchain Logic with Stellar Wallets Kit
- * ⚠️ DO NOT MODIFY THIS FILE! ⚠️
- */
-
 import * as StellarSdk from '@stellar/stellar-sdk';
 import { 
   StellarWalletsKit, 
@@ -33,7 +28,6 @@ export class StellarHelper {
       ? WalletNetwork.TESTNET 
       : WalletNetwork.PUBLIC;
 
-    // Stellar Wallets Kit'i initialize et
     this.kit = new StellarWalletsKit({
       network: this.network,
       selectedWalletId: FREIGHTER_ID,
@@ -47,7 +41,6 @@ export class StellarHelper {
 
   async connectWallet(): Promise<string> {
     try {
-      // Wallet modal'ı aç ve wallet seçildiğinde adresi al
       await this.kit.openModal({
         onWalletSelected: async (option) => {
           console.log('Wallet selected:', option.id);
@@ -55,7 +48,6 @@ export class StellarHelper {
         }
       });
 
-      // Seçilen wallet'ın adresini al
       const { address } = await this.kit.getAddress();
 
       if (!address) {
@@ -119,7 +111,6 @@ export class StellarHelper {
 
     const transaction = transactionBuilder.setTimeout(180).build();
 
-    // Wallet Kit ile imzala
     const { signedTxXdr } = await this.kit.signTransaction(transaction.toXDR(), {
       networkPassphrase: this.networkPassphrase,
     });

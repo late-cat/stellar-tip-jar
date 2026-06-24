@@ -93,7 +93,6 @@ export default function TipJarCard({ receiverPublicKey, senderPublicKey, onSucce
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl glass-panel overflow-hidden shadow-2xl relative z-10"
     >
-      {/* Left side: QR Code */}
       <div className="bg-white/5 p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-stellar-purple/20 to-transparent opacity-50 pointer-events-none" />
         
@@ -126,7 +125,6 @@ export default function TipJarCard({ receiverPublicKey, senderPublicKey, onSucce
         </div>
       </div>
 
-      {/* Right side: Tipping Interface */}
       <div className="p-10 flex flex-col justify-center">
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Support the Creator</h2>

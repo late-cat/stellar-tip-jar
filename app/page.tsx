@@ -9,7 +9,6 @@ import { stellar } from "@/lib/stellar-helper";
 const WalletConnect = dynamic(() => import("@/components/WalletConnect"), { ssr: false });
 const TipJarCard = dynamic(() => import("@/components/TipJarCard"), { ssr: false });
 
-// Placeholder Testnet Public Key (User should replace this with their own or pass via env/props)
 const RECEIVER_PUBLIC_KEY = process.env.NEXT_PUBLIC_RECEIVER_KEY || "GAYPCDGQ2MT3COTCRZW3YX2WHA2W2YYTUVOGFN7AXZ3GYHT72ICXK6KA";
 
 export default function Home() {
@@ -37,16 +36,14 @@ export default function Home() {
   const handleSuccess = () => {
     setIsSuccess(true);
     if (publicKey) updateBalance(publicKey);
-    setTimeout(() => setIsSuccess(false), 5000); // Hide success overlay after 5s
+    setTimeout(() => setIsSuccess(false), 5000);
   };
 
   return (
     <main className="min-h-screen relative overflow-hidden flex flex-col">
-      {/* Dynamic Background Elements */}
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-stellar-purple/20 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-stellar-accent/10 blur-[120px] rounded-full pointer-events-none" />
       
-      {/* Header */}
       <header className="w-full p-6 flex justify-between items-center z-20">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-stellar-purple to-stellar-accent flex items-center justify-center shadow-lg shadow-stellar-purple/30">
@@ -64,7 +61,6 @@ export default function Home() {
         />
       </header>
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col items-center justify-center p-6 z-10 w-full max-w-7xl mx-auto">
         {isSuccess && (
           <motion.div 

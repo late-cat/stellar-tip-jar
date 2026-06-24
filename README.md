@@ -37,11 +37,11 @@ While basic templates simply get the job done, **StellaTip** was built to delive
 Here is a visual demonstration proving all White Belt requirements have been met:
 
 ### 1. Wallet Connected State & Balance Displayed
-*The wallet is connected, and the user's abbreviated public key and precise XLM balance are elegantly displayed in the top right pill.*
-<img src="demo/img/wallet-modal.png" alt="Wallet Connected and Balance" width="800"/>
+*The wallet is successfully connected. The user's abbreviated public key and precise XLM balance are elegantly displayed in the top right pill on the main interface.*
+<img src="demo/img/hero-demo.png" alt="Wallet Connected and Balance" width="800"/>
 
-### 2. Transaction Flow (Signing)
-*The user selects an amount (e.g., 100 XLM) and is prompted by the Freighter extension to securely sign the transaction payload.*
+### 2. Transaction Flow (Wallet Modal & Signing)
+*When a transaction is initiated, the application connects to the user's selected wallet (e.g., Freighter) and prompts them to securely sign the transaction payload.*
 <img src="demo/img/freighter-confirm.png" alt="Signing Transaction" width="800"/>
 
 ### 3. Successful Testnet Transaction & User Feedback

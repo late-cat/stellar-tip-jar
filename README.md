@@ -42,11 +42,11 @@ Here is a visual demonstration proving all White Belt requirements have been met
 
 ### 2. Transaction Flow (Wallet Modal & Signing)
 *When a transaction is initiated, the application connects to the user's selected wallet (e.g., Freighter) and prompts them to securely sign the transaction payload.*
-<img src="demo/img/freighter-confirm.png" alt="Signing Transaction" width="800"/>
+<img src="demo/img/wallet-modal.png" alt="Signing Transaction" width="800"/>
 
 ### 3. Successful Testnet Transaction & User Feedback
 *The transaction succeeds on the testnet! The user is presented with a success toast notification containing a clickable link to verify the transaction hash on the explorer, alongside a celebratory confetti overlay.*
-<img src="demo/img/success.png" alt="Transaction Success" width="800"/>
+<img src="demo/img/freighter-confirm.png" alt="Transaction Success" width="800"/>
 
 ---
 

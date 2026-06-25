@@ -2,6 +2,8 @@
   <img src="demo/img/hero-demo.png" alt="StellaTip Hero" width="800"/>
   <h1>🌟 StellaTip: A Decentralized Tip Jar</h1>
   <p><strong>A premium, high-performance decentralized application built on the Stellar Testnet.</strong></p>
+
+  <h3>🚀 Live Demo: <a href="https://stellar-tip-jar-kappa.vercel.app/">https://stellar-tip-jar-kappa.vercel.app/</a></h3>
 </div>
 
 ---
@@ -129,3 +131,31 @@ Navigate to [http://localhost:3000](http://localhost:3000) in your browser. Conn
 <div align="center">
   <p>Built with ❤️ on the Stellar Network</p>
 </div>
+
+---
+
+## 🚀 Vercel Deployment Logs
+
+Proof of successful automated deployment to Vercel production edge network:
+
+```text
+18:12:11.310  ┌ ○ /                                    393 kB          481 kB
+18:12:11.311  └ ○ /_not-found                          873 B          88.3 kB
+18:12:11.311  + First Load JS shared by all            87.5 kB
+18:12:11.312    ├ chunks/117-eec771b9a2ecb45d.js       31.7 kB
+18:12:11.312    ├ chunks/fd9d1056-9002ba7e10c06506.js  53.6 kB
+18:12:11.312    └ other shared chunks (total)          2.1 kB
+18:12:11.312  
+18:12:11.312  ○  (Static)  prerendered as static content
+18:12:11.313  
+18:12:11.456  Traced Next.js server files in: 47.244ms
+18:12:11.629  Created all serverless functions in: 173.468ms
+18:12:11.645  Collected static files (public/, static/, .next/static): 7.214ms
+18:12:11.735  Build Completed in /vercel/output [1m]
+18:12:11.908  Deploying outputs...
+18:12:17.198  Deployment completed
+18:12:17.347  Creating build cache...
+18:12:42.742  Created build cache: 25s
+18:12:42.742  Uploading build cache [187.67 MB]
+18:12:46.639  Build cache uploaded: 3.905s
+```

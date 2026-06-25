@@ -9,7 +9,7 @@ import {
 export class StellarHelper {
   private server: StellarSdk.Horizon.Server;
   private networkPassphrase: string;
-  private kit: StellarWalletsKit;
+  private kit: StellarWalletsKit | null = null;
   private network: WalletNetwork;
   private publicKey: string | null = null;
 
@@ -28,11 +28,13 @@ export class StellarHelper {
       ? WalletNetwork.TESTNET 
       : WalletNetwork.PUBLIC;
 
-    this.kit = new StellarWalletsKit({
-      network: this.network,
-      selectedWalletId: FREIGHTER_ID,
-      modules: allowAllModules(),
-    });
+    if (typeof window !== 'undefined') {
+      this.kit = new StellarWalletsKit({
+        network: this.network,
+        selectedWalletId: FREIGHTER_ID,
+        modules: allowAllModules(),
+      });
+    }
   }
 
   isFreighterInstalled(): boolean {
@@ -40,11 +42,12 @@ export class StellarHelper {
   }
 
   async connectWallet(): Promise<string> {
+    if (!this.kit) throw new Error('StellarWalletsKit is not initialized');
     try {
       await this.kit.openModal({
         onWalletSelected: async (option) => {
           console.log('Wallet selected:', option.id);
-          this.kit.setWallet(option.id);
+          this.kit?.setWallet(option.id);
         }
       });
 
@@ -111,6 +114,7 @@ export class StellarHelper {
 
     const transaction = transactionBuilder.setTimeout(180).build();
 
+    if (!this.kit) throw new Error('StellarWalletsKit is not initialized');
     const { signedTxXdr } = await this.kit.signTransaction(transaction.toXDR(), {
       networkPassphrase: this.networkPassphrase,
     });

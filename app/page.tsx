@@ -43,12 +43,12 @@ export default function Home() {
     <main className="min-h-screen relative overflow-hidden flex flex-col">
       <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
       
-      <header className="w-full p-6 flex justify-between items-center z-20">
+      <header className="w-full p-4 md:p-6 flex flex-wrap justify-between items-center z-20 gap-4">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-stellar-purple/10 border border-stellar-purple/20 flex items-center justify-center shadow-sm">
-            <Sparkles className="text-stellar-purple w-5 h-5" />
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-stellar-purple/10 border border-stellar-purple/20 flex items-center justify-center shadow-sm">
+            <Sparkles className="text-stellar-purple w-4 h-4 md:w-5 md:h-5" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-stellar-ink font-serif italic">
+          <h1 className="text-xl md:text-2xl font-bold tracking-tight text-stellar-ink font-serif italic">
             StellaTip
           </h1>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
         />
       </header>
 
-      <div className="flex-1 flex flex-col items-center justify-center p-6 z-10 w-full max-w-7xl mx-auto">
+      <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-6 z-10 w-full max-w-7xl mx-auto">
         {isSuccess && (
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}

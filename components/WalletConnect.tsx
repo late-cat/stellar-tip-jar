@@ -41,10 +41,10 @@ export default function WalletConnect({ onConnect, onDisconnect, connectedKey, b
       <button
         onClick={handleConnect}
         disabled={isConnecting}
-        className="flex items-center gap-2 bg-stellar-purple hover:bg-stellar-purple-light transition-all text-white px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg disabled:opacity-70"
+        className="flex items-center gap-2 bg-stellar-purple hover:bg-stellar-purple-light transition-all text-white px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base rounded-full font-medium shadow-md hover:shadow-lg disabled:opacity-70"
       >
         <Wallet className="w-4 h-4" />
-        {isConnecting ? "Connecting..." : "Connect Freighter"}
+        {isConnecting ? "Connecting..." : "Connect"}
       </button>
     );
   }
@@ -53,18 +53,18 @@ export default function WalletConnect({ onConnect, onDisconnect, connectedKey, b
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-3 bg-white/80 hover:bg-white border border-black/10 shadow-sm transition-all text-stellar-ink px-4 py-2 rounded-full font-medium backdrop-blur-md"
+        className="flex items-center gap-2 md:gap-3 bg-white/80 hover:bg-white border border-black/10 shadow-sm transition-all text-stellar-ink px-3 py-1.5 md:px-4 md:py-2 rounded-full font-medium backdrop-blur-md"
       >
-        <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
-        <span className="text-sm font-semibold tracking-wide">
+        <div className="hidden md:block w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+        <span className="text-xs md:text-sm font-semibold tracking-wide">
           {stellar.formatAddress(connectedKey)}
         </span>
         {balance && (
-          <span className="text-sm text-stellar-ink/60 pl-2 border-l border-black/10 font-mono">
+          <span className="text-xs md:text-sm text-stellar-ink/60 pl-2 border-l border-black/10 font-mono">
             {Number(balance).toFixed(2)} XLM
           </span>
         )}
-        <ChevronDown className="w-4 h-4 text-stellar-ink/50" />
+        <ChevronDown className="hidden md:block w-4 h-4 text-stellar-ink/50" />
       </button>
 
       {isOpen && (

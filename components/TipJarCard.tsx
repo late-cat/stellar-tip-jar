@@ -91,9 +91,9 @@ export default function TipJarCard({ receiverPublicKey, senderPublicKey, onSucce
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[2rem] paper-panel overflow-hidden relative z-10"
+      className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl md:rounded-[2rem] paper-panel overflow-hidden relative z-10"
     >
-      <div className="bg-black/[0.03] p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-black/10 relative overflow-hidden">
+      <div className="bg-black/[0.03] p-8 md:p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-black/10 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-stellar-purple/10 to-transparent opacity-60 pointer-events-none" />
         
         <div className="relative bg-white p-4 rounded-2xl shadow-sm mb-6 border border-black/5 transition-transform hover:scale-105 duration-300">
@@ -125,9 +125,9 @@ export default function TipJarCard({ receiverPublicKey, senderPublicKey, onSucce
         </div>
       </div>
 
-      <div className="p-10 flex flex-col justify-center">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-stellar-ink font-serif">Support the Creator</h2>
+      <div className="p-6 md:p-10 flex flex-col justify-center">
+        <div className="mb-6 md:mb-8 text-center md:text-left">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-stellar-ink font-serif">Support the Creator</h2>
           <p className="text-stellar-ink/60 text-sm font-medium">Send some XLM to show your appreciation. It's fast, secure, and helps keep the lights on.</p>
         </div>
 

@@ -58,6 +58,10 @@ Here is a visual demonstration proving all White Belt requirements have been met
 *Clicking the explorer link proves the transaction was successfully settled on the ledger, showcasing the exact fee, source account, and memo.*
 <img src="demo/img/explorer-verification.png" alt="Explorer Verification" width="800"/>
 
+### 6. Vercel Production Deployment
+*Proof of successful automated deployment to Vercel production edge network.*
+<img src="demo/img/deployment-logs.png" alt="Vercel Deployment Logs" width="800"/>
+
 ---
 
 ## 🏗️ Project Structure
@@ -131,11 +135,3 @@ Navigate to [http://localhost:3000](http://localhost:3000) in your browser. Conn
 <div align="center">
   <p>Built with ❤️ on the Stellar Network</p>
 </div>
-
----
-
-## 🚀 Vercel Deployment Logs
-
-Proof of successful automated deployment to Vercel production edge network:
-
-<img src="demo/img/deployment-logs.png" alt="Vercel Deployment Logs" width="100%"/>
